@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "auth": "apps/auth"
+    "auth": "apps/auth",
+    "prisma-client": "libs/prisma-client"
   }
 }
