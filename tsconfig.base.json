@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@trustee/prisma-client": ["libs/prisma-client/src/"]
+      "@trustee/prisma-client": ["libs/prisma-client/src/", "libs/prisma-client/types/"],
     }
   },
   "exclude": ["node_modules", "tmp"]
