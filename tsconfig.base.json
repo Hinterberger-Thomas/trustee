@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@trustee/password-hasing": ["libs/password-hasing/src/index.ts"],
       "@trustee/prisma-client": ["libs/prisma-client/src/"]
     }
   },

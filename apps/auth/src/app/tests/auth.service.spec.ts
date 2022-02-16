@@ -1,42 +1,37 @@
 import { Test } from '@nestjs/testing';
-
 import { AuthService } from '../auth.service';
+import { PrismaService } from '../prisma.service';
+import { userStub } from './stubs/user.stub';
 
-describe('AppService', () => {
+describe('AuthService', () => {
   let service: AuthService;
 
   beforeAll(async () => {
     const app = await Test.createTestingModule({
-      providers: [AuthService],
+      providers: [AuthService,PrismaService],
     }).compile();
 
     service = app.get<AuthService>(AuthService);
   });
 
-  describe('getData', () => {
-    it('should return "Welcome to auth!"', () => {
-      expect(service.getData()).toEqual({ message: 'Welcome to auth!' });
+  describe('login', () => {
+    it('should return void', async () => {
+      expect(await service.login(userStub())).toBeUndefined();
     });
   });
-  describe('getData', () => {
-    it('should return "Welcome to auth!"', () => {
-      const a = service.getData()
-      a
-      expect(service.getData()).toEqual({ message: 'Welcome to auth!' });
+  describe('register', () => {
+    it('should return void', async () => {
+      expect(await service.register(userStub())).toBeUndefined();
     });
   });
-  describe('getData', () => {
-    it('should return "Welcome to auth!"', () => {
-      const a = service.getData()
-      a
-      expect(service.getData()).toEqual({ message: 'Welcome to auth!' });
+  describe('resetPassword', () => {
+    it('should return void', async () => {
+      expect(await service.resetPassword(userStub())).toBeUndefined();
     });
   });
-  describe('getData', () => {
-    it('should return "Welcome to auth!"', () => {
-      const a = service.getData()
-      a
-      expect(service.getData()).toEqual({ message: 'Welcome to auth!' });
+  describe('deleteUser', () => {
+    it('should return void', async () => {
+      expect(await service.deleteUser()).toBeUndefined();
     });
   });
 });

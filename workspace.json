@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "auth": "apps/auth",
+    "password-hasing": "libs/password-hasing",
     "prisma-client": "libs/prisma-client"
   }
 }

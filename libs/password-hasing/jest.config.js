@@ -1,16 +1,15 @@
 module.exports = {
-  displayName: 'auth',
+  displayName: 'password-hasing',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
-      isolatedModules:true
     },
   },
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]s$': 'ts-jest',
+    '^.+\\.[tj]sx?$': 'ts-jest',
   },
-  moduleFileExtensions: ['ts', 'js', 'html','e2e-spec.ts'],
-  coverageDirectory: '../../coverage/apps/auth',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  coverageDirectory: '../../coverage/libs/password-hasing',
 };

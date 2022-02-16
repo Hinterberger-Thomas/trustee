@@ -1,0 +1,23 @@
+{
+  "root": "libs/password-hasing",
+  "sourceRoot": "libs/password-hasing/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/password-hasing/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/password-hasing"],
+      "options": {
+        "jestConfig": "libs/password-hasing/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

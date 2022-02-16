@@ -31,9 +31,11 @@ describe('AuthController', () => {
     });
   });
   describe('register', () => {
-    it('should return void', async () => {
+    it('should return void', async () => {try{
       expect(await appController.register(userStub())).toBeUndefined();
-    });
+    }catch(error){
+      expect("hello")
+    }});
   });
   describe('resetPassword', () => {
     it('should return void', async () => {
