@@ -10,7 +10,7 @@ services:
   # The name of our service is "database"
   # but you can use the name of your choice.
   # Note: This may change the commands you are going to use a little bit.
-  database:
+  postgres:
     # Official Postgres image from DockerHub (we use the last version)
     image: 'postgres:latest'
 
@@ -28,3 +28,12 @@ services:
       POSTGRES_USER: username 
       POSTGRES_PASSWORD: password 
       POSTGRES_DB: trustee 
+  redis:
+    image: redis:latest
+    ports:
+      - '6379:6379'
+  rcli:
+    image: redis:latest
+    links:
+      - redis
+    command: redis-cli -h redis
